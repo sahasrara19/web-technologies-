@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head><title> Job reg form </title></head>
+<style>
+ body {                
+           background-color:lightblue
+;
+            
+        }
+</style>
+<body>
+
+<h2> JOB REGISTRATION FORM </h2>
+<br><br>
+<form id="jf">
+Name: <input type="text" id="name">
+<br><br>
+Email: <input type="text" id="email">
+<br><br>
+Contact: <input type="number" id="c">
+<br><br>
+<button type="submit"> Register </button>
+</form>
+
+<script>
+
+document.getElementById('jf').addEventListener('submit', function(event) {
+event.preventDefault()
+let name = document.getElementById('name').value.trim();
+let email = document.getElementById('email').value.trim();
+let contact = document.getElementById('c').value.trim();
+
+let n = /^[A-Za-z\s]{2,}$/;
+let e = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let co = /^\d{10}$/;
+
+if (!n.test(name)) {
+    alert("Error: Invalid Name!");
+} 
+else if (!e.test(email)) {
+    alert("Error: Invalid Email!");
+} 
+else if (!co.test(contact)) {
+    alert("Error: Contact number must be 10 digits!");
+} 
+else {
+    alert("Registered Successfully");
+    document.getElementById('jf').reset();
+}
+
+});
+</script>
+</body>
+</html>
