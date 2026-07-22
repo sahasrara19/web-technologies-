@@ -15,3 +15,5 @@ Files:
  `e1.html` : Main exercise HTML file
  `apple.html` : Apple brand web page
  `Samsung.html` : Samsung brand web page
+
+week 2
