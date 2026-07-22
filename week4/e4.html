@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head><title> EMI calculator </title></head>
+<style>
+ body {                
+           background-color:lightpink;
+            
+        }
+</style>
+<body>
+
+<h2> EMI CALCULATOR </h2>
+<br><br>
+<form id="loanForm">
+Name: <input type="text" id="name">
+<br><br>
+Occupation: <input type="text" id="occupation">
+<br><br>
+Loan amount: <input type="number" id="loanamount">
+<br><br>
+Rate of interest: <input type="number" id="rateofinterest" step=any>
+<br><br>
+Tenure (Years): <input type="number" id="tenure">
+<br><br>
+<button type="submit"> Calculate EMI </button>
+</form>
+
+<h3 id="result"></h3>
+
+<script>
+document.getElementById('loanForm').addEventListener('submit', function(event) {
+event.preventDefault();
+let n=document.getElementById('name').value;
+let p=parseFloat(document.getElementById('loanamount').value);
+let r=parseFloat(document.getElementById('rateofinterest').value);
+let t=parseInt(document.getElementById('tenure').value);
+
+let mr= (r/12)/100;
+let tm=t*12;
+let emi = (p * mr * Math.pow(1 + mr, tm)) / (Math.pow(1 + mr, tm) - 1);
+document.getElementById('result').innerText = n + ", your monthly EMI is: ₹" + emi.toFixed(2);
+});
+
+</script>
+</body>
+</html>
+
+
+
+
+
