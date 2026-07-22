@@ -9,11 +9,24 @@ Course Name: Web Technologies
 
 
 
- Week 1
+ ## Week 1
+ 
  Description:Created web pages exploring HTML structures, links, and layout elements using sample brand pages.
-Files:
- `e1.html` : Main exercise HTML file
- `apple.html` : Apple brand web page
- `Samsung.html` : Samsung brand web page
+ 
+ ##  week 2 
+ 
+ Description:Created web pages exploring HTML frames,external css.
 
-week 2
+ ## week 3
+
+ Description: Created web page exploring forms.
+
+ ##  week 4
+
+ Description: Created web pages exploring forms and java scripting.
+
+ ##  week 5
+
+ Description: Created web pages exploring forms,java scripting and regular expressions.
+ 
+ 
